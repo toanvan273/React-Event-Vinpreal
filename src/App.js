@@ -36,6 +36,15 @@ const MainMenu = styled.div`
         height: 108px;
         border-left: 1px solid rgba(255, 255, 255, 0.25);
     }
+    .title h1{
+        font-size: 48px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.17;
+        letter-spacing: 4px;
+        margin: 0;
+    }
 `
 
 

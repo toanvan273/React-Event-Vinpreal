@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Icon from './images/ic_menu.png'
 import Logo from './images/logo_vinpearl.png'
-
-
-
 import CameraShow from './components/Camera'
 import LoadImage from './components/LoadImage'
 import styled from 'styled-components'
@@ -12,8 +9,6 @@ const Div = styled.div`
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-`
-const Main = styled.div`
 `
 
 const MainMenu = styled.div`
@@ -48,7 +43,7 @@ const MainMenu = styled.div`
 class App extends Component {
     render() {
         return (
-            <Main>
+            <>
                 <MainMenu className="header">
                     <Div className="logo-vinpreal">
                         <img src={Logo} className="img-responsive" alt="so" />
@@ -61,10 +56,9 @@ class App extends Component {
                     </Div>
                 </MainMenu>
                 <LoadImage />
-
                 <CameraShow />
 
-            </Main>
+            </>
 
         );
     }

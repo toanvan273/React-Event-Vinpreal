@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-
-
-
 import styled from 'styled-components'
 
 const Div = styled.div`
@@ -25,8 +22,6 @@ class ImageGrid extends Component {
             <>
                 <Bitmap draggable={true}
                 onDragStart={this.props.onDragStart}
-                onDragEnd={this.props.onDragEnd} 
-                onDrop={(e) => this.props.onDrop(e, 'img')}
                 onDragOver={(event) => event.preventDefault()}
                 >
                     <img src={this.props.url} className="img-respon" alt="age" />

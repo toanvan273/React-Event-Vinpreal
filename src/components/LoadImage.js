@@ -118,21 +118,16 @@ class LoadImage extends Component {
         }
     }
     onDrop = (event, key) => {
-        console.log('onDrop',event, key)
         let { data, chooseIdImg } = this.state
-        if (key === 'img' && key === null) {
-            return;
-        } else {
-            data.forEach((e, index) => {
-                if (e.id === chooseIdImg) {
-                    data.splice(index, 1)
-                    this.setState({
-                        data: data,
-                        chooseIdImg: null
-                    })
-                }
-            })
-        }
+        data.forEach((e, index) => {
+            if (e.id === chooseIdImg) {
+                data.splice(index, 1)
+                this.setState({
+                    data: data,
+                    chooseIdImg: null
+                })
+            }
+        })
 
     }
 

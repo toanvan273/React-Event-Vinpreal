@@ -37,7 +37,7 @@ const Div = styled.div`
 
 const DivNum = styled(Div)`
     line-height: 1.5;
-    border: 2px solid #fff;
+    border: 5px solid #fff;
     border-radius: 4px;
     background: #5bc3bf;
     color: #fff;

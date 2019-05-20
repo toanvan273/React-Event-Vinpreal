@@ -13,6 +13,8 @@ const Div = styled.div`
   vertical-align: middle;
   text-align: center;
 `
+const Main = styled.div`
+`
 
 const MainMenu = styled.div`
     width: 100%;
@@ -46,7 +48,7 @@ const MainMenu = styled.div`
 class App extends Component {
     render() {
         return (
-            <>
+            <Main>
                 <MainMenu className="header">
                     <Div className="logo-vinpreal">
                         <img src={Logo} className="img-responsive" alt="so" />
@@ -62,7 +64,7 @@ class App extends Component {
 
                 <CameraShow />
 
-            </>
+            </Main>
 
         );
     }

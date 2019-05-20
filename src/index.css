@@ -2,16 +2,39 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue","LucidaGrande","LucidaGrande-Bold",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New","LucidaGrande",
     monospace;
 }
  html{
    height: 100%;
  }
+ @font-face {
+  font-family: "LucidaGrande-Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url('./statics/fonts/LucidaGrande-Bold/LucidaGrande-Bold.woff2') , /* Super Modern Browsers */
+      url('./statics/fonts/LucidaGrande-Bold/LucidaGrande-Bold.woff'), /* Modern Browsers */
+}
+@font-face {
+  font-family: "LucidaGrande";
+  font-style: normal;
+  font-weight: 400;
+  src: url('./statics/fonts/LucidaGrande/LucidaGrande.ttf'),
+      url('./statics/fonts/LucidaGrande/LucidaGrande.eot'), 
+      url('./statics/fonts/LucidaGrande/LucidaGrande.woff2'), 
+      url('./statics/fonts/LucidaGrande/LucidaGrande.woff'), 
+
+/*   
+  src: local('LucidaGrande'), local('Lucida Grande'),
+      url('./statics/fonts/LucidaGrande/LucidaGrande.eot?#iefix') format('embedded-opentype'), 
+      url('./statics/fonts/LucidaGrande/LucidaGrande.woff2') format('woff2'), 
+      url('./statics/fonts/LucidaGrande/LucidaGrande.woff') format('woff'), 
+      url('./statics/fonts/LucidaGrande/LucidaGrande.ttf') format('truetype'), */
+}

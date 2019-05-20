@@ -13,8 +13,8 @@ const Div = styled.div`
 const Bitmap = styled(Div)`
     width: 150px;
     height: 200px;
-    margin-right: 15px;
-    border: 2px solid #5bc3bf;
+    margin-right: 30px;
+    border: 5px solid #5bc3bf;
     border-radius: 4px;
 `
 

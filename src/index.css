@@ -13,17 +13,3 @@ code {
 html {
   height: 100%;
 }
-
-@font-face {
-  font-family: "LucidaGrande-Bold";
-  font-style: normal;
-  font-weight: 400;
-  src: url('./statics/fonts/LucidaGrande-Bold/LucidaGrande-Bold.woff2'), url('./statics/fonts/LucidaGrande-Bold/LucidaGrande-Bold.woff'),
-}
-
-@font-face {
-  font-family: "LucidaGrande";
-  font-style: normal;
-  font-weight: 400;
-  src: url('./statics/fonts/LucidaGrande/LucidaGrande.ttf'), url('./statics/fonts/LucidaGrande/LucidaGrande.eot'), url('./statics/fonts/LucidaGrande/LucidaGrande.woff2'), url('./statics/fonts/LucidaGrande/LucidaGrande.woff'),
-}

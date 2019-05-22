@@ -1,74 +1,39 @@
 import React, { Component } from 'react';
-import Icon from './images/ic_menu.png'
-import Logo from './images/logo_vinpearl.png'
-import CameraShow from './components/Camera'
-import LoadImage from './components/LoadImage'
 import styled from 'styled-components'
+import SideBar from './components/SideBar'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import MainLayout from './pages/MainLayout'
+import Chatbox from './components/content/Chatbox'
+import Home from './components/content/Home'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const Div = styled.div`
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-`
 
-const MainMenu = styled.div`
-    width: 100%;
-    min-width: 1024px;
-    height: auto;
-    background-color: #0a312f;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    .logo-vinpreal{
-        width: 108px;
-        height: 108px;
-        background: #fbab18;
-        justify-content: center;
-        align-items: center;
+const MainPage = styled.div`
+    display:flex;
+    flex-direction:row;
+    .rigth-mainpage{
         display: flex;
-    }
-    .icon-menu{
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        width: 108px;
-        height: 108px;
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-    }
-    .title h1{
-        font-size: 48px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.17;
-        letter-spacing: 4px;
-        margin: 0;
+        flex-direction:column;
+        flex:1;
     }
 `
-
-
-
 class App extends Component {
     render() {
         return (
-            <>
-                <MainMenu className="header">
-                    <Div className="logo-vinpreal">
-                        <img src={Logo} className="img-responsive" alt="so" />
-                    </Div>
-                    <Div className="title">
-                        <h1>VINPEARL CONTROL ACCESS</h1>
-                    </Div>
-                    <Div className="icon-menu">
-                        <img src={Icon} className="img-responsive" alt="be" />
-                    </Div>
-                </MainMenu>
-                <LoadImage />
-                <CameraShow />
-
-            </>
-
+            <Router>
+                <MainPage>
+                    <SideBar />
+                    <div className="rigth-mainpage">
+                        <Header />
+                        <MainLayout>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/chat" component={Chatbox} />
+                        </MainLayout>
+                        <Footer />
+                    </div>
+                </MainPage>
+            </Router>
         );
     }
 }

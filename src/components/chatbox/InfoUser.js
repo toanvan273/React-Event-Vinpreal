@@ -7,15 +7,17 @@ import d from './../../statics/images/d.png'
 
 
 const Bound = styled.div`
-    
         display: flex;
         flex-direction:column;
         width: 260px;
         vertical-align: top;
         .rectangle{
+            display:flex;
+            flex-direction:column;
+            flex:1;
             box-sizing: border-box;
             padding: 10px;
-            height: 346px;
+            /* height: 346px; */
             background-image: linear-gradient(37deg, #9000ff 0%, #8100e1 24%, #005cec, #005bec);
             .text{
                 font-size: 12px;
@@ -133,6 +135,9 @@ const Bound = styled.div`
             }
         }
         .block-info{
+            display:flex;
+            flex-direction:column;
+            flex:1;
             .avatar{
                 text-align: center;
                 padding-top: 10px;

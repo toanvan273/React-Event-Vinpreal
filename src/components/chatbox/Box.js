@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import Dara from './../../statics/images/dara2.png'
 
-import Users from './../chatbox/Users'
-import InfoUser from './../chatbox/InfoUser'
 
 const Bound = styled.div`
-   .block-center{
         display: flex;
         flex-direction:column;
         flex: 1;
         background: #fff;
         .top-info{
+            display:flex;
             height: 90px;
             box-sizing: border-box;
             padding: 10px;
@@ -79,31 +77,34 @@ const Bound = styled.div`
         .block-message{
             display: flex;
             flex: 1;
-            flex-direction: column;
             overflow:auto;
             box-sizing: border-box;
             padding: 20px;
             border-left: 1px solid #d0d4da;
             /* box-shadow: inset 0.5px 0 0 0 #d0d4da; */
             .scroll{
+                display:flex;
+                flex-direction:column;
                 width:100%;
                 height:fit-content;
-                max-height: 500px;
-            }
-            .message{
-                display: flex;
-                justify-content: flex-end;
-                margin-bottom: 10px;
-                span{
-                    border-radius: 12px;
-                    background-color: #008bcc;
-                    font-size: 14px;
-                    color: #ffffff;
-                    padding: 10px 15px;
+                /* max-height: 500px; */
+                .message{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-bottom: 10px;
+                    span{
+                        border-radius: 12px;
+                        background-color: #008bcc;
+                        font-size: 14px;
+                        color: #ffffff;
+                        padding: 10px 15px;
+                    }
                 }
             }
+            
         }
         .form-chat{
+            display:flex;
             height: 72px;
             box-shadow: 0 -8px 30px 0 rgba(0, 0, 0, 0.05);
             background-color: #ffffff;
@@ -111,6 +112,7 @@ const Bound = styled.div`
                 text-align: center;
                 line-height: 4.5;
                 position: relative;
+                width: 100%;
             }
             .input-text{
                 height: 39px;
@@ -135,14 +137,14 @@ const Bound = styled.div`
             }
         }
         
-   }
+   
    
 `
 class Box extends Component {
     render() {
         return (
             <Bound>
-                <div className="block-center">
+                
                     <div className="top-info">
                         <div className="user-img">
                             <div className="icon-status"></div>
@@ -164,9 +166,6 @@ class Box extends Component {
                     </div>
                     <div className="block-message">
                         <div className="scroll">
-                            {/* <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
                             <div className="message">
                                 <span>ABC KHI NAO GAP?</span>
                             </div>
@@ -206,54 +205,6 @@ class Box extends Component {
                             <div className="message">
                                 <span>ABC KHI NAO GAP?</span>
                             </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div> */}
                             <div className="message">
                                 <span>ABC KHI NAO GAP?</span>
                             </div>
@@ -273,7 +224,7 @@ class Box extends Component {
                             </button>
                         </form>
                     </div>
-                </div>
+                
             </Bound>
         );
     }

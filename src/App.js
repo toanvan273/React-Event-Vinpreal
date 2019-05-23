@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 const MainPage = styled.div`
     display:flex;
     flex-direction:row;
+    flex:1;
     .rigth-mainpage{
         display: flex;
         flex-direction:column;

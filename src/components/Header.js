@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 
 const Roud = styled.div`
-    display:flex;
+  
     height:60px;
     background-image: linear-gradient(121deg, #00a1e4, #005d98);
-    justify-content: space-between;
     .button-style{
         display: inline-block;
         width: 225px;

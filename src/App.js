@@ -27,10 +27,10 @@ class App extends Component {
                     <SideBar />
                     <div className="rigth-mainpage">
                         <Header />
-                        {/* <MainLayout> */}
+                        <MainLayout>
                             <Route exact path="/" component={Home} />
                             <Route path="/chat" component={Chatbox} />
-                        {/* </MainLayout> */}
+                        </MainLayout>
                         <Footer />
                     </div>
                 </MainPage>

@@ -255,84 +255,87 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className="bottom-page">
-                    <table className="table-content">
-                        <thead>
-                            <tr>
-                                <th>DATE</th>
-                                <th>TYPE</th>
-                                <th>DETAILS</th>
-                                <th>DEPOSITS</th>
-                                <th>WITHRAWALS</th>
-                                <th>BALANCE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                            <tr>
-                                <td>30 Sep 2018</td>
-                                <td>Topup</td>
-                                <td>Phone number: 0983758298</td>
-                                <td></td>
-                                <td>200000</td>
-                                <td>12864000</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div className="table">
+                        <table className="table-content" cellPadding="0" cellSpacing="0">
+                            <thead>
+                                <tr>
+                                    <th>DATE</th>
+                                    <th>TYPE</th>
+                                    <th>DETAILS</th>
+                                    <th>DEPOSITS</th>
+                                    <th>WITHRAWALS</th>
+                                    <th>BALANCE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 Sep 2018</td>
+                                    <td>Topup</td>
+                                    <td>Phone number: 0983758298</td>
+                                    <td></td>
+                                    <td>200000</td>
+                                    <td>12864000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
 
                 </div>
             </Bound>

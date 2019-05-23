@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import Dara from './../../statics/images/dara2.png'
 
 
 const Bound = styled.div`
@@ -115,6 +114,7 @@ const Bound = styled.div`
                 width: 100%;
             }
             .input-text{
+                outline: none;
                 height: 39px;
                 border-radius: 24px;
                 background-color: #eff1f5;
@@ -140,91 +140,82 @@ const Bound = styled.div`
    
    
 `
+
+
 class Box extends Component {
+    state = {
+        txtText: '',
+    }
+ 
+    onChange = e => {
+        e.preventDefault()
+        let value = e.target.value
+        let name = e.target.name
+        this.setState({
+            [name]: value
+        })
+    }
+
+    onSubmit = event => {
+        event.preventDefault()
+        const { userChoose } = this.props
+        const { txtText } = this.state
+        let dataMes = userChoose.message
+        dataMes.push(txtText)
+        this.setState({
+            txtText: ''
+        })
+        this.props.getData(dataMes, userChoose.id)
+    }
     render() {
+        const { userChoose } = this.props
+        let elmMess = userChoose.message.length === 0 ? null : userChoose.message.map(e => {
+            return (
+                <div className="message" key={e}>
+                    <span>{e}</span>
+                </div>
+            )
+        })
+
+
         return (
             <Bound>
-                
-                    <div className="top-info">
-                        <div className="user-img">
-                            <div className="icon-status"></div>
-                            <div className="img">
-                                <img src={Dara} alt="dara" />
-                            </div>
-                        </div>
-                        <div className="name-user">
-                            <h5>Lucy Nguyen</h5>
-                            <span className="username">
-                                @lucynguyen
-                            </span>
-                            <i className="fa fa-circle" aria-hidden="true"></i>
-                            <span>Last seen 3 hours ago</span>
-                        </div>
-                        <div className="more">
-                            <i className="fa fa-ellipsis-h" aria-hidden="true"></i>
+                <div className="top-info">
+                    <div className="user-img">
+                        <div className="icon-status"></div>
+                        <div className="img">
+                            <img src={userChoose.image} alt={userChoose.username} />
                         </div>
                     </div>
-                    <div className="block-message">
-                        <div className="scroll">
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                            <div className="message">
-                                <span>ABC KHI NAO GAP?</span>
-                            </div>
-                        </div>
+                    <div className="name-user">
+                        <h5>{userChoose.name}</h5>
+                        <span className="username">
+                            {userChoose.username}
+                        </span>
+                        <i className="fa fa-circle" aria-hidden="true"></i>
+                        <span>{userChoose.timezone}</span>
                     </div>
-                    <div className="form-chat">
-                        <form>
-                            <input type="text" className="input-text" placeholder="Type something" />
-                            <button type="submit" className="btn-send">
-                                <i className="fa fa-location-arrow" aria-hidden="true"></i>
-                            </button>
-                        </form>
+                    <div className="more">
+                        <i className="fa fa-ellipsis-h" aria-hidden="true"></i>
                     </div>
-                
+                </div>
+                <div className="block-message">
+                    <div className="scroll">
+                        {elmMess}
+                    </div>
+                </div>
+                <div className="form-chat">
+                    <form onSubmit={this.onSubmit}>
+                        <input type="text" className="input-text"
+                            value={this.state.txtText}
+                            onChange={this.onChange}
+                            name="txtText" placeholder="Type something" />
+                        <button type="submit" className="btn-send">
+                            <i className="fa fa-location-arrow" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+
             </Bound>
         );
     }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import plus from './../../statics/images/plus.png'
-import Dara from './../../statics/images/dara2.png'
 
 const Bound = styled.div`
  
@@ -74,6 +73,7 @@ const Bound = styled.div`
                 background-image: linear-gradient(76deg, #f98153, #f45112);
             }
             .box{
+                cursor: pointer;
                 box-sizing: border-box;
                 border-radius: 5px;
                 box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
@@ -144,7 +144,30 @@ const Bound = styled.div`
    
 `
 class Users extends Component {
+    getIdUser = (id) => {
+        this.props.getId(id)
+    }
     render() {
+        const { users } = this.props
+        let elmUsers = users.map(e => {
+            return (
+                <div className="box" key={e.id} onClick={ () => this.getIdUser(e.id)}>
+                    <div className="avatar">
+                        <div className="icon-status"></div>
+                        <div className="img">
+                            <img src={e.image} alt={e.username} />
+                        </div>
+                    </div>
+                    <div className="name-text">
+                        <b>{e.name}</b>
+                        <p>{e.message.length === 0 ? null : e.message[e.message.length - 1]}</p>
+                    </div>
+                    <div className="time-zone">
+                        <span>{e.timezone}</span>
+                    </div>
+                </div>
+            )
+        })
         return (
             <Bound>
                 <div className="search-sort">
@@ -173,7 +196,7 @@ class Users extends Component {
                     </div>
                 </div>
                 <div className="block-humen">
-                    <div className="box active-box">
+                    {/* <div className="box active-box">
                         <div className="avatar">
                             <div className="icon-status"></div>
                             <div className="img">
@@ -187,22 +210,8 @@ class Users extends Component {
                         <div className="time-zone">
                             <span>3 mins</span>
                         </div>
-                    </div>
-                    <div className="box">
-                        <div className="avatar">
-                            <div className="icon-status"></div>
-                            <div className="img">
-                                <img src={Dara} alt="dara" />
-                            </div>
-                        </div>
-                        <div className="name-text">
-                            <b>San Dara</b>
-                            <p>Wait forn some minutes</p>
-                        </div>
-                        <div className="time-zone">
-                            <span>3 mins</span>
-                        </div>
-                    </div>
+                    </div> */}
+                    {elmUsers}
                 </div>
             </Bound>
         );

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import Dara from './../../statics/images/dara2.png'
 import Dara2 from './../../statics/images/dara.png'
 import wee from './../../statics/images/wee.png'
 import d from './../../statics/images/d.png'
@@ -147,7 +146,8 @@ const Bound = styled.div`
                 height: 120px;
                 display: inline-block;
                 img{
-                    width: 100%;
+                    width: 120px;
+                    height: 120px;
                     border-radius: 100%;
                 }
             }
@@ -222,7 +222,25 @@ const Bound = styled.div`
    
 `
 class InfoUser extends Component {
+    state = {
+        txtNumber: null
+    }
+    onChange = e => {
+        const toNumber = Number(e.target.value.replace(/\D/g, ""));
+        let toLocale = toNumber.toLocaleString('de-DE');
+    //    let value = e.target.value
+    //    let name = e.target.name
+       this.setState({
+        txtNumber : toLocale
+       })
+    }
+   
     render() {
+        const {user} = this.props
+        let {txtNumber} = this.state
+ 
+        // let val = this.escapeRegExp(txtNumber)
+        // console.log(typeof txtNumber, txtNumber)
         return (
             <Bound className="block-right">
                 <div className="rectangle">
@@ -235,7 +253,10 @@ class InfoUser extends Component {
                     <div className="number-input">
                         <div className="plus">+</div>
                         <div className="number">
-                            <input type="number" placeholder="Number" />
+                            <input type="text" 
+                            name="txtNumber"
+                            value={txtNumber|| ''}
+                            onChange={this.onChange} placeholder="Number" />
                         </div>
                         <div className="img">
                             <img src={d} alt="d" />
@@ -271,17 +292,17 @@ class InfoUser extends Component {
                 <div className="block-info">
                     <div className="avatar">
                         <div className="ava">
-                            <img src={Dara} alt="dara" />
+                            <img src={user.image} alt={user.username} />
                         </div>
                         <div className="info">
-                            <h4>Lucy Nguyen</h4>
-                            <span>@lucynguyen</span>
+                            <h4>{user.name}</h4>
+                            <span>{user.username}</span>
                         </div>
                     </div>
                     <div className="info-detail">
                         <div className="acc-no">
                             <span>Acc No:</span>
-                            <div className="number">20009237423854992</div>
+                            <div className="number"> {user.id} </div>
                         </div>
                         <div className="media">
                             <span>Media (31)</span>

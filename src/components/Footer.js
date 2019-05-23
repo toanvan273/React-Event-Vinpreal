@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 
 const Foud = styled.div`
-    display:flex;
-    height:80px;
-        padding: 0 40px;
+        height:80px;
+        padding: 20px 40px;
         background-image: linear-gradient(121deg,#00a1e4,#005d98);
         color: #c5e1ef;
     .bank-info{
@@ -58,7 +57,7 @@ class Footer extends Component {
             <Foud>
                 <div className="bank-info">
                     <h3>VIETNAM EXPORT IMPORT BANK</h3>
-                    <p>8th Floor - Vincom Center, 72 Le Thanh Ton and 45A Ly Tu Trong Street, District 1, HCMC</p>
+                    <p>8th Floor - Vincom Center, 72 Le Thanh Ton and 45A Ly Tu Trong Street, District 1, HCM</p>
                 </div>
                 <div className="all-info">
                     <div className="mail-call">

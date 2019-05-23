@@ -6,14 +6,12 @@ import wee from './../statics/images/wee.png'
 import { Link } from "react-router-dom";
 
 const Bound = styled.div`
+    display:flex;
+    flex-direction:column;
     width: 260px;
-    height: 100%;
-    display: inline-block;
-    .left-sidebar{
-    display: inline-block;
+    
     vertical-align: top;
-    width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background: #006a9b;
     .head{
         background: #1d7ca7;
@@ -86,7 +84,7 @@ const Bound = styled.div`
                 vertical-align: text-bottom;
             }
         }
-    }
+    
 }
 `
 
@@ -94,7 +92,6 @@ class SideBar extends Component {
     render() {
         return (
             <Bound className="side-bar">
-                <div className="left-sidebar">
                     <div className="head">
                         <img src={Logo} alt="eximbank" />
                     </div>
@@ -112,12 +109,14 @@ class SideBar extends Component {
                     <div className="menu-side">
                         <nav className="nav-bar">
                             <ul>
-                                <li className="nav-link">
-                                    <Link to="/">
+
+                                <Link to="/">
+                                    <li className="nav-link">
                                         <i className="fa fa-home" aria-hidden="true"></i>
                                         Home
-                                    </Link>
-                                </li>
+                                    </li>
+                                </Link>
+
                                 <li className="nav-link">
                                     <i className="fa fa-usd" aria-hidden="true"></i>
                                     Money Transfer
@@ -133,18 +132,17 @@ class SideBar extends Component {
                                     <i className="fa fa-money" aria-hidden="true"></i>
                                     Products Services
                                 </li>
-                                <li className="nav-link">
-                                    <Link to="/chat">
+
+                                <Link to="/chat">
+                                    <li className="nav-link">
                                         <i className="fa fa-weixin" aria-hidden="true"></i>
                                         Chat
-                                    </Link>
-
-                                </li>
+                                    </li>
+                                </Link>
                             </ul>
                         </nav>
                     </div>
-                </div>
-            </Bound>
+            </Bound >
 
         );
     }

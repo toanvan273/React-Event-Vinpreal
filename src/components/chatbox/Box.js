@@ -6,16 +6,12 @@ import Users from './../chatbox/Users'
 import InfoUser from './../chatbox/InfoUser'
 
 const Bound = styled.div`
-    display: flex;
-    flex: 1;
-    
    .block-center{
         display: flex;
         flex-direction:column;
         flex: 1;
         background: #fff;
         .top-info{
-            display:flex;
             height: 90px;
             box-sizing: border-box;
             padding: 10px;
@@ -90,29 +86,24 @@ const Bound = styled.div`
             border-left: 1px solid #d0d4da;
             /* box-shadow: inset 0.5px 0 0 0 #d0d4da; */
             .scroll{
-                display:flex;
-                flex-direction:column;
                 width:100%;
                 height:fit-content;
-                /* max-height: 500px; */
-                .message{
-                    display: flex;
-                    justify-content: flex-end;
-                    /* height:50px; */
-                    margin-bottom: 10px;
-                    span{
-                        border-radius: 12px;
-                        background-color: #008bcc;
-                        font-size: 14px;
-                        color: #ffffff;
-                        padding: 10px 15px;
-                    }
+                max-height: 500px;
+            }
+            .message{
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 10px;
+                span{
+                    border-radius: 12px;
+                    background-color: #008bcc;
+                    font-size: 14px;
+                    color: #ffffff;
+                    padding: 10px 15px;
                 }
             }
-            
         }
         .form-chat{
-            display:flex;
             height: 72px;
             box-shadow: 0 -8px 30px 0 rgba(0, 0, 0, 0.05);
             background-color: #ffffff;
@@ -147,11 +138,10 @@ const Bound = styled.div`
    }
    
 `
-class Chatbox extends Component {
+class Box extends Component {
     render() {
         return (
             <Bound>
-                <Users />
                 <div className="block-center">
                     <div className="top-info">
                         <div className="user-img">
@@ -174,7 +164,7 @@ class Chatbox extends Component {
                     </div>
                     <div className="block-message">
                         <div className="scroll">
-                            <div className="message">
+                            {/* <div className="message">
                                 <span>ABC KHI NAO GAP?</span>
                             </div>
                             <div className="message">
@@ -263,7 +253,7 @@ class Chatbox extends Component {
                             </div>
                             <div className="message">
                                 <span>ABC KHI NAO GAP?</span>
-                            </div>
+                            </div> */}
                             <div className="message">
                                 <span>ABC KHI NAO GAP?</span>
                             </div>
@@ -284,10 +274,9 @@ class Chatbox extends Component {
                         </form>
                     </div>
                 </div>
-                <InfoUser />
             </Bound>
         );
     }
 }
 
-export default Chatbox;
+export default Box;

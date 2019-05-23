@@ -5,7 +5,6 @@ const Roud = styled.div`
     display:flex;
     height:60px;
     background-image: linear-gradient(121deg, #00a1e4, #005d98);
-    flex: 1;
     justify-content: space-between;
     .button-style{
         display: inline-block;

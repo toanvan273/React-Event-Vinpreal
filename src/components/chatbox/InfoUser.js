@@ -7,9 +7,10 @@ import d from './../../statics/images/d.png'
 
 
 const Bound = styled.div`
-    &.block-right{
-        display: inline-block;
-        width: 20%;
+    
+        display: flex;
+        flex-direction:column;
+        width: 260px;
         vertical-align: top;
         .rectangle{
             box-sizing: border-box;
@@ -213,7 +214,7 @@ const Bound = styled.div`
                 }
             }
         }
-   }
+   
 `
 class InfoUser extends Component {
     render() {

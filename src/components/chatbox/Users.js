@@ -5,13 +5,12 @@ import Dara from './../../statics/images/dara2.png'
 
 const Bound = styled.div`
  
-        display: inline-block;
+        display: flex;
+        flex-direction:column;
         width: 360px;
         vertical-align: top;
         background: #fff;
-        padding-top: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding:15px 15px 0 15px;
         box-sizing: border-box;
         .search-sort{
             .form-search{
